@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoque</title>
+    <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+
+    <h1>Controle de Estoque</h1>
+    <div class="container">
+        <div class="form-container">
+            <h2>Adicionar Material</h2>
+            <input type="text" id="nome-material" placeholder="Nome do Material" required>
+            <input type="number" id="quantidade-material" placeholder="Quantidade" required>
+            <button onclick="adicionarMaterial()">Adicionar Material</button>
+        </div>
+
+        <div class="form-container">
+            <h2>Movimentar Estoque</h2>
+            <input type="number" id="id-material" placeholder="ID do Material" required>
+            <select id="tipo-movimentacao" required>
+                <option value="entrada">Entrada</option>
+                <option value="saida">Saída</option>
+            </select>
+            <input type="number" id="quantidade-movimentacao" placeholder="Quantidade" required>
+            <button onclick="movimentarEstoque()">Movimentar</button>
+        </div>
+
+        <h2>Estoque Atual</h2>
+        <table id="estoque-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Quantidade</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Lista de materiais -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="src/script.js"></script>
+
+</body>
+</html>
